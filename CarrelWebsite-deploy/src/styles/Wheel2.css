@@ -1,0 +1,348 @@
+.wheel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.wheel {
+  position: relative;
+  width: 780px;
+  height: 780px;
+  padding-left: 200px;
+}
+
+.center-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: 380px;
+  background-color: var(--center-bg, #eaeaea); /* default color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, background-color 0.5s ease,
+    box-shadow 0.3s ease;
+}
+
+.center-circle:hover {
+  border-color: #0053d7; /* Tailwind blue-500 */
+}
+.center-circle p {
+  margin: 0.3rem 0;
+  color: var(--text-color, #666); /* default color */
+  font-size: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.center-circle h2 {
+  margin: 0.5rem 0;
+  color: var(--text-color, #666);
+  font-size: 3rem;
+  font-weight: bold;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.segment {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding: 3rem;
+  margin: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.segment-content {
+  width: 80%;
+  padding: 1rem;
+  position: relative;
+}
+
+.segment h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.segment p {
+  font-size: 1rem;
+}
+
+/* Position text in each segment to avoid overlap */
+.top-left .segment-content {
+  transform: translate(-5%, -20%);
+}
+
+.top-right .segment-content {
+  transform: translate(20%, -20%);
+}
+
+.bottom-left .segment-content {
+  transform: translate(-20%, 20%);
+}
+
+.bottom-right .segment-content {
+  transform: translate(20%, 15%);
+}
+
+.top-left {
+  top: 0;
+  left: 0;
+  background-color: #4ecdc4; /* Teal */
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+  background-color: #ff8c42; /* Orange */
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+  background-color: #3db757; /* Green */
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  background-color: #e56399; /* Pink */
+}
+
+/* Adjust for responsive layouts */
+@media (max-width: 850px) {
+  .wheel {
+    width: 600px;
+    height: 600px;
+    padding: 15px;
+  }
+
+  .center-circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .center-circle img {
+    max-width: 180px;
+  }
+
+  .center-circle p {
+    font-size: 0.9rem;
+  }
+
+  .center-circle h2 {
+    font-size: 1.6rem;
+  }
+
+  .segment {
+    width: 290px;
+    height: 290px;
+    margin: 8px;
+  }
+
+  .segment h3 {
+    font-size: 1.2rem;
+  }
+
+  .segment p {
+    font-size: 0.9rem;
+  }
+
+  .top-left .segment-content {
+    transform: translate(-15%, -15%);
+  }
+
+  .top-right .segment-content {
+    transform: translate(15%, -15%);
+  }
+
+  .bottom-left .segment-content {
+    transform: translate(-15%, 15%);
+  }
+
+  .bottom-right .segment-content {
+    transform: translate(15%, 10%);
+  }
+}
+
+@media (max-width: 650px) {
+  .wheel {
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+  }
+
+  .center-circle {
+    width: 210px;
+    height: 210px;
+  }
+
+  .center-circle img {
+    max-width: 80px;
+  }
+
+  .center-circle p {
+    font-size: 0.62rem;
+    padding: 0.5rem;
+  }
+
+  .center-circle h2 {
+    font-size: 1.2rem;
+  }
+
+  .segment {
+    width: 190px;
+    height: 190px;
+    margin: 8px;
+  }
+
+  .segment h3 {
+    font-size: 0.7rem;
+  }
+  .segment-content {
+    padding: 0.5rem;
+  }
+
+  .top-left .segment-content {
+    transform: translate(-17%, -15%);
+  }
+
+  .top-right .segment-content {
+    transform: translate(20%, -12%);
+  }
+
+  .bottom-left .segment-content {
+    transform: translate(-20%, 10%);
+  }
+
+  .bottom-right .segment-content {
+    transform: translate(10%, 5%);
+  }
+}
+
+@media (max-width: 450px) {
+  .wheel {
+    width: 400px;
+    height: 400px;
+    padding: 8px;
+  }
+
+  .center-circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .center-circle img {
+    max-width: 60px;
+  }
+
+  .center-circle p {
+    font-size: 0.6rem;
+    padding: 0.3rem;
+  }
+
+  .center-circle h2 {
+    font-size: 1.3rem;
+    margin: 0.2rem 0;
+  }
+
+  .segment {
+    width: 190px;
+    height: 190px;
+    margin: 4px;
+    padding: 1.5rem;
+  }
+
+  .segment h3 {
+    font-size: 0.8rem;
+  }
+
+  .segment p {
+    font-size: 0.65rem;
+  }
+
+  .segment-content {
+    padding: 0.25rem;
+  }
+}
+
+/* Ensure each segment transitions smoothly */
+.segment {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Updated transform that both translates the segment to center and scales it up */
+/* .segment.top-left.move-to-center {
+  transform: translate(50%, 50%);
+}
+
+.segment.top-right.move-to-center {
+  transform: translate(-50%, 50%);
+}
+
+.segment.bottom-left.move-to-center {
+  transform: translate(50%, -50%);
+}
+
+.segment.bottom-right.move-to-center {
+  transform: translate(-50%, -50%);
+} */
+
+/* Change the center circle's color when a segment moves to the center */
+.wheel:has(.segment.top-left.move-to-center) .center-circle {
+  --center-bg: #4ecdc4;
+  --text-color: white;
+}
+
+.wheel:has(.segment.top-right.move-to-center) .center-circle {
+  --center-bg: #ff8c42;
+  --text-color: white;
+}
+
+.wheel:has(.segment.bottom-left.move-to-center) .center-circle {
+  --center-bg: #3db757;
+  --text-color: white;
+}
+
+.wheel:has(.segment.bottom-right.move-to-center) .center-circle {
+  --center-bg: #e56399;
+  --text-color: white;
+}
+
+/* Enlarge center-circle when any segment is at the center */
+.wheel:has(.segment.move-to-center) .center-circle {
+  transform: translate(-50%, -50%) scale(2.15);
+}
+
+/* Adjust text sizes when a segment is centered and the circle is enlarged */
+.wheel:has(.segment.move-to-center) .center-circle h2 {
+  font-size: clamp(
+    0.6rem,
+    1vw,
+    1.2rem
+  ); /* min: 0.8rem, preferred: 1vw, max: 1.5rem */
+}
+
+.wheel:has(.segment.move-to-center) .center-circle p {
+  font-size: clamp(
+    0.5rem,
+    0.9vw,
+    1rem
+  ); /* min: 0.8rem, preferred: 1vw, max: 1.5rem */
+}

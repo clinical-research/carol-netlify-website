@@ -1,0 +1,39 @@
+.particle-sphere-container {
+  width: 100%;
+  height: 100vh;
+  overflow: visible;
+}
+
+@media (max-width: 1024px) {
+  .particle-sphere-container {
+    height: 80vh;
+  }
+}
+@media (max-width: 800px) {
+  .particle-sphere-container {
+    height: 60vh;
+  }
+}
+
+.particle-sphere-canvas {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+/* Optional animation for when the sphere becomes spiky */
+@keyframes glow {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.5);
+  }
+  100% {
+    filter: brightness(2);
+  }
+}
+
+.spiky-active {
+  animation: glow 0.7s ease-in-out;
+}

@@ -1,0 +1,48 @@
+/* Change the color of inactive dots */
+.carousel .control-dots .dot {
+  background: #888; /* Set to your desired inactive dot color */
+  opacity: 0.5;
+}
+
+/* Change the color of the active dot */
+.carousel .control-dots .dot.selected {
+  background: blue; /* Set to your desired active dot color */
+  opacity: 0.5;
+}
+
+/* Hide default arrows */
+.carousel .control-arrow:before,
+.carousel.carousel-slider .control-arrow:before {
+  display: none !important;
+  content: none !important;
+  border: none !important;
+}
+
+/* Style the custom arrow buttons container */
+.carousel .control-arrow,
+.carousel.carousel-slider .control-arrow {
+  opacity: 1;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+}
+
+/* Hover effect for arrows */
+.carousel .control-arrow:hover,
+.carousel.carousel-slider .control-arrow:hover {
+  background: rgba(198, 198, 198, 0.385);
+}
+
+/* Custom arrow icon styling */
+.custom-arrow-icon {
+  color: blue;
+  opacity: 0.5;
+  font-size: 40px;
+}

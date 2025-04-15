@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+body {
+  background: #f6f6f6;
+  font-family: "Quicksand", sans-serif;
+}
+
+@layer components {
+  .title {
+    @apply lg:text-6xl text-4xl font-bold text-blue-500;
+  }
+  .text {
+    @apply lg:text-2xl text-xl text-gray-500;
+  }
+}
