@@ -149,9 +149,9 @@ const MediaCarousel = ({ video, image }) => {
               style={{ maxWidth: "100%" }}
             />
           ) : (
-            <div className="flex border-2 border-gray-200 rounded-3xl w-fit lg:h-full xl:h-fit h-fit p-5">
+            <div className="flex rounded-3xl w-fit lg:h-full xl:h-fit h-fit lg:p-5 p-0">
               <img
-                className="object-contain"
+                className="object-contain rounded-2xl"
                 src={slide.src}
                 alt={`slide-${index}`}
                 style={{ height: "100%", width: "100%" }}
