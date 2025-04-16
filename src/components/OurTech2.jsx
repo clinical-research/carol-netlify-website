@@ -143,6 +143,8 @@ const MediaCarousel = ({ video, image }) => {
               src={slide.src}
               autoPlay
               muted
+              loop
+              playsInline 
               className="object-contain w-full max-h-[70vh]"
               style={{ maxWidth: "100%" }}
             />
