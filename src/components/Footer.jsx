@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
 
           {/* Social Media */}
-          <div>
+          {/* <div>
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
               <a
@@ -54,7 +54,7 @@ const Footer = () => {
                 <FaLinkedin size={24} />
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Copyright */}

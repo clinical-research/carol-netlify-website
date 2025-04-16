@@ -25,7 +25,7 @@ const Leader = () => {
     {
       id: 3,
       name: "Dr Alhussain Yasin",
-      position: "Chief Medical Officer",
+      position: "Chief Medical Advisor",
       image: defaultImage,
       bio: "Experienced leader with a passion for innovation and strategic growth.",
     },

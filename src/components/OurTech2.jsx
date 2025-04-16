@@ -100,7 +100,7 @@ const MediaCarousel = ({ video, image }) => {
       showThumbs={false}
       showStatus={false}
       swipeable
-      interval={5000}
+      interval={8000}
       transitionTime={1000}
       stopOnHover={false}
       onChange={handleSlideChange}
@@ -143,9 +143,8 @@ const MediaCarousel = ({ video, image }) => {
               src={slide.src}
               autoPlay
               muted
-              loop
-              playsInline 
-              className="object-contain w-full max-h-[70vh]"
+              playsInline
+              className="object-contain w-full max-h-[66vh]"
               style={{ maxWidth: "100%" }}
             />
           ) : (
