@@ -12,6 +12,7 @@ import AnimatedComponent from "./components/AnimatedComponent";
 import OurTech2 from "./components/OurTech2";
 import End from "./components/End";
 import Leader from "./components/Leader";
+import Story from "./components/Story";
 const App = () => {
   const [showButton, setShowButton] = useState(false);
 
@@ -40,12 +41,10 @@ const App = () => {
     <>
       <Navbar />
       <Homepage />
-      {/* <AnimatedComponent /> */}
       <About />
-      {/* <OurTech /> */}
       <OurTech2 />
       <End />
-      <Leader />
+      {/* <Story /> */}
       <Contact />
       <Footer />
 

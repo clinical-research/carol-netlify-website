@@ -6,6 +6,7 @@ import { IoHomeOutline } from "react-icons/io5";
 import { CiCircleInfo } from "react-icons/ci";
 import { FaRegLightbulb } from "react-icons/fa";
 import { MdOutlinePreview } from "react-icons/md";
+import { RiBookLine } from "react-icons/ri";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +49,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`flex fixed top-0 z-60 w-[100%] justify-center items-center rounded-b-xl bg-gradient-to-r from-[#0f4563] to-[#1c7bae] transition-all duration-300 ${
+        className={`flex fixed top-0 z-70 w-[100%] justify-center items-center md:rounded-b-xl rounded-b-none bg-gradient-to-r from-[#0f4563] to-[#1c7bae] transition-all duration-300 ${
           scrolled ? "h-[60px]" : "h-[80px]"
         }`}
       >
@@ -80,7 +81,7 @@ const Navbar = () => {
                   scrolled ? "hidden" : "show"
                 }`}
               />
-              <h1 className="text-white xl:text-lg text-md mx-1 font-bold whitespace-nowrap group-hover:text-blue-200 hover:text-blue-200 hover:border-b-2 hover:border-white">
+              <h1 className="text-white xl:text-sm text-xs mx-1 font-bold whitespace-nowrap group-hover:text-blue-200 hover:text-blue-200 hover:border-b-2 hover:border-white">
                 Home
               </h1>
             </div>
@@ -93,8 +94,21 @@ const Navbar = () => {
                   scrolled ? "hidden" : "show"
                 }`}
               />
-              <h1 className="text-white xl:text-lg text-md mx-1 font-bold whitespace-nowrap group-hover:text-blue-200 hover:text-blue-200 hover:border-b-2 hover:border-white">
+              <h1 className="text-white xl:text-sm text-xs mx-1 font-bold whitespace-nowrap group-hover:text-blue-200 hover:text-blue-200 hover:border-b-2 hover:border-white">
                 About
+              </h1>
+            </div>
+            <div
+              className="flex flex-col items-center cursor-pointer transition-all duration-300 hover:scale-110"
+              onClick={() => scrollToSection("story")}
+            >
+              <RiBookLine
+                className={`text-white text-2xl mb-1 ${
+                  scrolled ? "hidden" : "show"
+                }`}
+              />
+              <h1 className="text-white xl:text-sm text-xs mx-1 font-bold whitespace-nowrap group-hover:text-blue-200 hover:text-blue-200 hover:border-b-2 hover:border-white">
+                Our Story
               </h1>
             </div>
             <div
@@ -106,7 +120,7 @@ const Navbar = () => {
                   scrolled ? "hidden" : "show"
                 }`}
               />
-              <h1 className="text-white text-lg mx-1 font-bold whitespace-nowrap group-hover:text-blue-200 hover:text-blue-200 hover:border-b-2 hover:border-white">
+              <h1 className="text-white xl:text-sm text-xs mx-1 font-bold whitespace-nowrap group-hover:text-blue-200 hover:text-blue-200 hover:border-b-2 hover:border-white">
                 Our Vision
               </h1>
             </div>
@@ -119,12 +133,12 @@ const Navbar = () => {
                   scrolled ? "hidden" : "show"
                 }`}
               />
-              <h1 className="text-white xl:text-lg text-md mx-1 font-bold whitespace-nowrap group-hover:text-blue-200 hover:text-blue-200 hover:border-b-2 hover:border-white">
+              <h1 className="text-white xl:text-sm text-xs mx-1 font-bold whitespace-nowrap group-hover:text-blue-200 hover:text-blue-200 hover:border-b-2 hover:border-white">
                 Contact
               </h1>
             </div>
             <div
-              className="flex flex-col items-center cursor-pointer bg-blue-400 rounded-3xl xl:p-2 p-1transition-all duration-300 hover:scale-110"
+              className="flex flex-col items-center cursor-pointer bg-blue-400 rounded-2xl xl:p-2 p-1transition-all duration-300 hover:scale-110"
               onClick={() => scrollToSection("contact", "requestDemo")}
             >
               <MdOutlinePreview
@@ -132,7 +146,7 @@ const Navbar = () => {
                   scrolled ? "hidden" : "show"
                 }`}
               />
-              <h1 className="text-white xl:text-lg text-md mx-1 font-bold whitespace-nowrap group-hover:text-blue-200 hover:text-blue-200 hover:border-b-2 hover:border-white">
+              <h1 className="text-white xl:text-sm text-xs mx-1 font-bold whitespace-nowrap group-hover:text-blue-200 hover:text-blue-200 hover:border-b-2 hover:border-white">
                 Request A Demo
               </h1>
             </div>
@@ -174,9 +188,9 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`flex justify-start md:hidden fixed w-full top-[50px] right-0 bg-opacity-70 bg-gradient-to-r from-[#0f4563] to-[#1c7bae] z-60 rounded-b-xl transform transition-transform duration-300 ease-in-out ${
+        className={`flex justify-start md:hidden fixed w-full right-0 bg-opacity-70 bg-gradient-to-r from-[#0f4563] to-[#1c7bae] z-60 rounded-b-xl transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-y-0" : "translate-y-[-200%]"
-        }`}
+        } ${scrolled ? "top-[50px]" : "top-[60px]"}`}
       >
         <div className="flex flex-col items-start py-4 px-5 w-50">
           <div
@@ -195,6 +209,15 @@ const Navbar = () => {
             <CiCircleInfo className="text-white text-xl mr-2" />
             <h1 className="text-white text-lg font-bold whitespace-nowrap hover:text-blue-200">
               About
+            </h1>
+          </div>
+          <div
+            className="flex items-center my-2 cursor-pointer transition-all duration-300 hover:translate-x-2"
+            onClick={() => scrollToSection("our-story")}
+          >
+            <RiBookLine className="text-white text-xl mr-2" />
+            <h1 className="text-white text-lg font-bold whitespace-nowrap hover:text-blue-200">
+              Our Story
             </h1>
           </div>
           <div

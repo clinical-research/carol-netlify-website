@@ -31,7 +31,7 @@ const Wheel2 = ({ onSegmentClick }) => {
     "bottom-left": {
       title: "AI Driven Digital <br/> Patient Management System",
       description: [
-        "Our AI-driven Digital Patient Management System uses voice commands and generative AI to streamline documentation, generate actionable insights, and reduce clinician workload. By embedding bias detection and correction mechanisms, we ensure equitable and data-informed decision-making.",
+        "Our AI-driven Digital Patient Management System primes clinicians through pre-generated text to speech patient summaries and leverages voice commands and generative AI to streamline documentation, generate actionable insights, and reduce clinician workload. By embedding bias detection and correction mechanisms, we ensure equitable and data-informed decision-making."
       ],
     },
     "bottom-right": {

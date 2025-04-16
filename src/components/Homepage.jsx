@@ -34,11 +34,11 @@ const Homepage = () => {
         <div className="flex flex-col lg:w-1/2 w-full lg:h-screen px-5 items-center justify-center order-2 lg:order-1 ">
           <h1 className="title mb-2">A Care for All</h1>
           <p className="lg:text-xl text-lg text-gray-500 text-center lg:px-10 px-5">
-            We are building a fully digital healthcare ecosystem by leveraging
-            world models — dynamic digital representations of patients,
-            treatments, and healthcare environments across hospitals and
-            clinics. By pioneering Healthcare 4.0, we strive to deliver
-            holistic, equitable, and personalized care.
+            At Carol, we envision a healthcare metaverse — a fully digital
+            ecosystem connecting patients, clinicians, hospitals, clinics, and
+            remote settings through the novel integration of clinical world
+            models. By pioneering healthcare 4.0, we strive to ensure every
+            patient receives holistic, equitable, and personalized care.
           </p>
           <div className="flex gap-5 justify-center w-full">
             <button
@@ -55,7 +55,7 @@ const Homepage = () => {
             </button>
           </div>
         </div>
-        <div className="flex flex-col lg:w-[55%] w-full lg:h-[80%] items-center justify-center order-1 lg:order-2 ">
+        <div className="flex flex-col lg:w-[55%] w-full lg:h-[80%] items-center justify-center order-1 lg:order-2 mt-10">
           <Earth />
         </div>
       </div>

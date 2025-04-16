@@ -20,7 +20,7 @@ const Leader = () => {
       name: "Junaid Ahmed",
       position: "Chief Technology Officer",
       image: Junaid,
-      bio: "I'm a professor at Johns Hopkins focused on NLP-driven AI. With a background in bioinformatics and bioengineering, my research spans industry and academia, from graph PDE-based biological networks to currently building clinical world models.",
+      bio: "As an adjunct professor at Johns Hopkins University, specializing in NLP-driven AI, Junaid brings a strong foundation in bioinformatics and bioengineering. With a career spanning industry and academia, his research delves into graph PDE-based biological networks and the development of clinical world models. Passionate about bridging complex systems and human impact, Junaid channels expertise to simplify drive innovation in healthcare enabled systems.",
     },
     {
       id: 3,

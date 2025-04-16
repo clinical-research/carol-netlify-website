@@ -143,8 +143,8 @@ const MediaCarousel = ({ video, image }) => {
               src={slide.src}
               autoPlay
               muted
-              className=""
-              style={{ height: "100%" }}
+              className="object-contain w-full max-h-[70vh]"
+              style={{ maxWidth: "100%" }}
             />
           ) : (
             <div className="flex border-2 border-gray-200 rounded-3xl w-fit lg:h-full xl:h-fit h-fit p-5">
@@ -172,6 +172,8 @@ const OurTech2 = () => {
   );
   // Add state to track which tooltip is visible
   const [visibleTooltip, setVisibleTooltip] = useState(null);
+  // Add state to track the currently active segment key
+  const [activeSegmentKey, setActiveSegmentKey] = useState("center");
 
   // Create a ref to target the content container
   const contentRef = useRef(null);
@@ -180,7 +182,17 @@ const OurTech2 = () => {
   const handleSegmentClick = (data) => {
     console.log("Segment clicked:", data);
     const segmentKey = data.segment || "center";
-    setSelectedSegment(segmentContents[segmentKey] || segmentContents.center);
+
+    // If clicking the same segment that's already active, reset to center
+    if (segmentKey === activeSegmentKey && segmentKey !== "center") {
+      setSelectedSegment(segmentContents.center);
+      setActiveSegmentKey("center");
+    } else {
+      // Otherwise, set to the clicked segment
+      setSelectedSegment(segmentContents[segmentKey] || segmentContents.center);
+      setActiveSegmentKey(segmentKey);
+    }
+
     // Close any open tooltip when changing segments
     setVisibleTooltip(null);
   };
