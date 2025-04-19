@@ -34,7 +34,7 @@ const Homepage = () => {
         <div className="flex flex-col lg:w-1/2 w-full lg:h-screen px-5 items-center justify-center order-2 lg:order-1 ">
           <h1 className="title mb-2">A Care for All</h1>
           <p className="lg:text-xl text-lg text-gray-500 text-center lg:px-10 px-5">
-            Carol is an AI-powered assistant that listens, learns, and supports
+            Carol is an AI-powered systems that listens, learns, and supports
             your day-to-day practice. Using <strong>natural voice and text interfaces,
             digital twins, and remote monitoring</strong>, Carol builds a real-time
             understanding of each patient—creating a dynamic model of their
