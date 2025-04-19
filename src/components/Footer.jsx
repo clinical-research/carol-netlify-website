@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Carol</h3>
             <p className="text-blue-100 mb-4">
-              Providing innovative solutions for your needs.
+              Advanced Healthcare 4.0 with AI and Automation
             </p>
           </div>
 
@@ -55,6 +55,21 @@ const Footer = () => {
               </a>
             </div>
           </div> */}
+        {/* About and Legal */}
+        <div>
+          <ul className="text-blue-100 space-y-2">
+            <li>
+              <a href="/about" className="hover:underline">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="/legal" className="hover:underline">
+                Legal
+              </a>
+            </li>
+          </ul>
+        </div>
         </div>
 
         {/* Copyright */}

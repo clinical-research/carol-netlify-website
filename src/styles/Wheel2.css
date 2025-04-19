@@ -39,7 +39,7 @@
 .center-circle p {
   margin: 0.3rem 0;
   color: var(--text-color, #666); /* default color */
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
@@ -348,24 +348,53 @@
   --text-color: white;
 }
 
-/* Enlarge center-circle when any segment is at the center */
+/* Base styles for when segments move to center */
 .wheel:has(.segment.move-to-center) .center-circle {
   transform: translate(-50%, -50%) scale(2.15);
 }
 
-/* Adjust text sizes when a segment is centered and the circle is enlarged */
+/* Default font sizes for large screens */
 .wheel:has(.segment.move-to-center) .center-circle h2 {
-  font-size: clamp(
-    0.4rem,
-    1vw,
-    1.2rem
-  ); /* min: 0.8rem, preferred: 1vw, max: 1.5rem */
+  font-size: 1.2rem;
 }
 
 .wheel:has(.segment.move-to-center) .center-circle p {
-  font-size: clamp(
-    0.4rem,
-    0.9vw,
-    1rem
-  ); /* min: 0.8rem, preferred: 1vw, max: 1.5rem */
+  font-size: 0.8rem;
+}
+
+/* Media queries specifically for the wheel:has states */
+@media (max-width: 850px) {
+  .wheel:has(.segment.move-to-center) .center-circle h2 {
+    font-size: 1.1rem;
+  }
+
+  .wheel:has(.segment.move-to-center) .center-circle p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .wheel:has(.segment.move-to-center) .center-circle h2 {
+    font-size: 0.65rem;
+  }
+
+  .wheel:has(.segment.move-to-center) .center-circle p {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .wheel:has(.segment.move-to-center) .center-circle h2 {
+    font-size: 0.5rem;
+  }
+
+  .wheel:has(.segment.move-to-center) .center-circle p {
+    font-size: 0.4rem;
+    padding: 0rem;
+  }
+
+  /* Adjust the scale factor for center circle when expanded */
+  .wheel:has(.segment.move-to-center) .center-circle {
+    transform: translate(-50%, -50%) scale(1.8);
+  }
 }

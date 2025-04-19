@@ -1,8 +1,32 @@
 @import "tailwindcss";
 
+/* Global scrollbar hiding for all elements */
+html,
+body,
+div,
+section,
+article,
+aside,
+header,
+footer,
+nav,
+main {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera - for all elements */
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
 body {
   background: #f6f6f6;
   font-family: "Quicksand", sans-serif;
+  scroll-behavior: smooth;
+  overflow-y: scroll; /* Ensure scrolling still works */
 }
 
 @layer components {

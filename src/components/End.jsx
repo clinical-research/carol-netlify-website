@@ -3,7 +3,10 @@ import aboutGif from "../assets/aboutNew.gif";
 
 const End = () => {
   return (
-    <section className="flex w-full lg:flex-row flex-col items-center bg-white">
+    <section
+      id="end"
+      className="flex w-full lg:flex-row flex-col items-center bg-white"
+    >
       <div className="flex justify-center items-center lg:w-1/2 w-full lg:order-2 order-1">
         <div className="">
           <img

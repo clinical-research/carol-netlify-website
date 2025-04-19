@@ -1,18 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "./components/Navbar";
-import Homepage from "./components/Homepage";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import OurTech from "./components/OurTech";
-import Footer from "./components/Footer";
-import OurVision from "./components/OurVision";
-import Future from "./components/Future";
-import Problem from "./components/Problem";
-import AnimatedComponent from "./components/AnimatedComponent";
-import OurTech2 from "./components/OurTech2";
-import End from "./components/End";
-import Leader from "./components/Leader";
-import Story from "./components/Story";
+import Navbar2 from "./components/Navbar2";
+import Main from "./components/Main";
+import Navbar3 from "./components/Navbar3";
 const App = () => {
   const [showButton, setShowButton] = useState(false);
 
@@ -39,14 +28,8 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
-      <Homepage />
-      <About />
-      <OurTech2 />
-      <End />
-      {/* <Story /> */}
-      <Contact />
-      <Footer />
+      <Navbar3 />
+      <Main />
 
       {showButton && (
         <button

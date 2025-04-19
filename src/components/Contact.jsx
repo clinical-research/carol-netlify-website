@@ -53,7 +53,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col w-full h-fit items-center p-10 gap-y-10"
+      className="flex flex-col w-full h-fit items-center py-10 px-12 md:px-20 gap-y-10"
     >
       <div className="flex flex-col gap-2 items-center px-10">
         <h1 className="title">Get in Touch</h1>

@@ -19,7 +19,7 @@ const Wheel2 = ({ onSegmentClick }) => {
       title:
         "Digital Twins <br/> and World Models <br/> for Holistic Healthcare",
       description: [
-        "Carol’s world models use digital twins to simulate patient outcomes and optimize care. By integrating history, real-time data, and predictions, they enable timely risk assessment and protocol adherence.",
+        "Carol's world models use digital twins to simulate patient outcomes and optimize care. By integrating history, real-time data, and predictions, they enable timely risk assessment and protocol adherence.",
       ],
     },
     "top-right": {
@@ -31,7 +31,7 @@ const Wheel2 = ({ onSegmentClick }) => {
     "bottom-left": {
       title: "AI Driven Digital <br/> Patient Management System",
       description: [
-        "Our AI-driven Digital Patient Management System primes clinicians through pre-generated text to speech patient summaries and leverages voice commands and generative AI to streamline documentation, generate actionable insights, and reduce clinician workload. By embedding bias detection and correction mechanisms, we ensure equitable and data-informed decision-making."
+        "Our AI-driven Digital Patient Management System primes clinicians through pre-generated text to speech patient summaries and leverages voice commands and generative AI to streamline documentation, generate actionable insights, and reduce clinician workload. By embedding bias detection and correction mechanisms, we ensure equitable and data-informed decision-making.",
       ],
     },
     "bottom-right": {
@@ -61,8 +61,8 @@ const Wheel2 = ({ onSegmentClick }) => {
           content: segmentContents.default,
         });
       }
-    } else {
-      // Select a segment and update center content
+    } else if (selectedSegment === null) {
+      // Only select a new segment if no segment is currently selected
       setSelectedSegment(segment);
       setCenterContent(content);
       // Send message to parent: segment selected
@@ -71,6 +71,18 @@ const Wheel2 = ({ onSegmentClick }) => {
           segment,
           action: "selected",
           content: content,
+        });
+      }
+    } else {
+      // If another segment is already selected, reset to center first
+      setSelectedSegment(null);
+      setCenterContent(segmentContents.default);
+      // Notify parent of reset
+      if (onSegmentClick) {
+        onSegmentClick({
+          segment: "center",
+          action: "reset",
+          content: segmentContents.default,
         });
       }
     }
